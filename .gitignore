@@ -1,0 +1,13 @@
+# Эталонный отчёт — не публикуется
+CR_Predictor_Report.docx
+
+# Python
+__pycache__/
+*.pyc
+
+# Регенерируемые артефакты тестов (пересоздаются при прогоне)
+tests/work_extract_check/
+tests/work_golden/
+tests/work_synthetic/
+tests/out_ref/
+tests/out_synthetic/

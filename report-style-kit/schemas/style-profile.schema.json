@@ -1,0 +1,190 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "style-profile.schema.json",
+  "title": "Style profile — контракт профиля стиля эталонного отчёта",
+  "description": "Детерминированно извлечённый профиль стиля образца: страница, роли стилей, таблицы, паттерны блоков, микротипографика, шаблоны таблиц и blueprint разделов.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["page", "style_roles", "table_styles", "microtypography", "table_templates", "section_blueprint"],
+  "properties": {
+    "page": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["width_emu", "height_emu", "orientation", "margins_emu"],
+      "properties": {
+        "width_emu": { "type": "integer" },
+        "height_emu": { "type": "integer" },
+        "orientation": { "enum": ["portrait", "landscape"] },
+        "margins_emu": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["top", "right", "bottom", "left"],
+          "properties": {
+            "top": { "type": "integer" },
+            "right": { "type": "integer" },
+            "bottom": { "type": "integer" },
+            "left": { "type": "integer" }
+          }
+        }
+      }
+    },
+    "style_roles": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["normal", "heading1", "heading2", "heading3", "list_bullet"],
+      "properties": {
+        "normal": { "$ref": "#/definitions/style_role" },
+        "heading1": { "$ref": "#/definitions/style_role" },
+        "heading2": { "$ref": "#/definitions/style_role" },
+        "heading3": { "$ref": "#/definitions/style_role" },
+        "list_bullet": { "$ref": "#/definitions/style_role" }
+      }
+    },
+    "table_styles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "cell_size_pt", "header_bold"],
+        "properties": {
+          "name": { "type": "string" },
+          "cell_size_pt": { "type": "number" },
+          "header_bold": { "type": "boolean" }
+        }
+      }
+    },
+    "title_block": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["size_pt", "bold", "italic", "alignment"],
+        "properties": {
+          "size_pt": { "type": "number" },
+          "bold": { "type": ["boolean", "null"] },
+          "italic": { "type": ["boolean", "null"] },
+          "alignment": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "block_patterns": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["figure_caption_regex", "formula_style", "lead_in_terminator"],
+      "properties": {
+        "figure_caption_regex": { "type": "string" },
+        "formula_style": { "type": "string" },
+        "lead_in_terminator": { "type": "string" },
+        "lead_in_count": { "type": "integer", "description": "Число lead-in абзацев (жирный run в начале, оканчивающийся на терминатор) в образце." },
+        "figure_caption_count": { "type": "integer", "description": "Число подписей рисунков, совпавших с figure_caption_regex." },
+        "formula_count": { "type": "integer", "description": "Число полностью курсивных непустых Normal-абзацев (кандидаты formula)." }
+      }
+    },
+    "microtypography": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["decimal_separator", "minus_char", "percent_spacing", "range_dash", "quotes", "arrow", "approx", "multiplication"],
+      "properties": {
+        "decimal_separator": { "enum": ["point", "comma", "mixed"] },
+        "minus_char": { "enum": ["U+2212", "ascii_hyphen", "mixed"] },
+        "percent_spacing": { "enum": ["spaced", "tight", "glued", "mixed"] },
+        "range_dash": { "enum": ["en_dash", "hyphen", "mixed"] },
+        "quotes": { "enum": ["guillemets", "straight", "mixed"] },
+        "arrow": { "type": "boolean" },
+        "approx": { "type": "boolean" },
+        "multiplication": { "type": "boolean" },
+        "patterns": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Сырые счётчики типографских паттернов по всем текстам образца (параграфы + таблицы).",
+          "properties": {
+            "decimal_point": { "type": "integer" },
+            "decimal_comma": { "type": "integer" },
+            "minus_unicode": { "type": "integer" },
+            "minus_ascii_hyphen": { "type": "integer" },
+            "percent_spaced": { "type": "integer" },
+            "percent_glued": { "type": "integer" },
+            "range_endash": { "type": "integer" },
+            "quotes_guillemets": { "type": "integer" },
+            "quotes_straight": { "type": "integer" },
+            "arrow": { "type": "integer" },
+            "approx": { "type": "integer" },
+            "multiplication": { "type": "integer" }
+          }
+        },
+        "examples": {
+          "type": "object",
+          "description": "Первый матч каждого паттерна (с небольшим контекстом), обрезанный до 40 символов.",
+          "additionalProperties": { "type": "string", "maxLength": 40 }
+        }
+      }
+    },
+    "table_templates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "header", "exemplar_table_index"],
+        "properties": {
+          "name": { "type": "string" },
+          "header": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          },
+          "exemplar_table_index": { "type": "integer" },
+          "occurrences": { "type": "integer" }
+        }
+      }
+    },
+    "section_blueprint": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["level", "heading", "block_sequence"],
+        "properties": {
+          "level": { "enum": [1, 2, 3] },
+          "heading": { "type": "string" },
+          "block_sequence": {
+            "type": "array",
+            "items": {
+              "enum": ["thesis", "lead_in", "formula", "bullets", "table", "figure", "verdict"]
+            }
+          }
+        }
+      }
+    },
+    "glossary_terms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["term", "count"],
+        "properties": {
+          "term": { "type": "string" },
+          "count": { "type": "integer" }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "style_role": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["font", "size_pt", "bold", "color_hex", "spacing_before_emu", "spacing_after_emu"],
+      "properties": {
+        "font": { "type": ["string", "null"] },
+        "size_pt": { "type": ["number", "null"] },
+        "bold": { "type": ["boolean", "null"] },
+        "color_hex": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9A-Fa-f]{6}$"
+        },
+        "spacing_before_emu": { "type": ["integer", "null"] },
+        "spacing_after_emu": { "type": ["integer", "null"] },
+        "source": { "type": ["string", "null"], "description": "Происхождение эффективного шрифта: style | theme | inherited | docDefaults." }
+      }
+    }
+  }
+}

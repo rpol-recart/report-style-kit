@@ -1,0 +1,7 @@
+{
+  "methods": [
+    { "name": "Global V8a", "mae": 0.0385 },
+    { "name": "V9 wide", "mae": 0.0338 }
+  ],
+  "pots_improved": 16
+}

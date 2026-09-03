@@ -1,0 +1,10 @@
+========================================================================
+lint_text: tests/out_smoke/lint_clean.json
+Режим: manifest | Blacklist: base/slang-blacklist.txt | Профиль: tests/work_extract_check/style-profile.json | Глоссарий: —
+Проверено текстов: 4
+========================================================================
+НАРУШЕНИЯ (FAIL): 0
+ПРЕДУПРЕЖДЕНИЯ (warn): 2
+  1. [glossary] латинский токен «naf» отсутствует в глоссарии — sections[0].blocks[0].text
+  2. [glossary] латинский токен «wide-» отсутствует в глоссарии — sections[0].blocks[2].text
+ИТОГ: PASS с 2 предупреждениями

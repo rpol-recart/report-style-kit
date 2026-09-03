@@ -1,0 +1,13 @@
+========================================================================
+lint_text: tests/manifest_synthetic.json
+Режим: manifest | Blacklist: base/slang-blacklist.txt | Профиль: tests/work_synthetic/style-profile.json | Глоссарий: —
+Проверено текстов: 24
+========================================================================
+НАРУШЕНИЯ (FAIL): 0
+ПРЕДУПРЕЖДЕНИЯ (warn): 5
+  1. [glossary] латинский токен «e1» отсутствует в глоссарии — sections[0].blocks[0].text
+  2. [glossary] латинский токен «kalman-» отсутствует в глоссарии — sections[1].blocks[0].text
+  3. [glossary] латинский токен «materials» отсутствует в глоссарии — sections[2].blocks[1].text
+  4. [glossary] латинский токен «numbers.json» отсутствует в глоссарии — sections[2].blocks[1].text
+  5. [glossary] латинский токен «pots» отсутствует в глоссарии — sections[2].blocks[2].header[3]
+ИТОГ: PASS с 5 предупреждениями

@@ -1,0 +1,17 @@
+========================================================================
+lint_text: tests/out_smoke/lint_bad.json
+Режим: manifest | Blacklist: base/slang-blacklist.txt | Профиль: — | Глоссарий: —
+Проверено текстов: 2
+========================================================================
+НАРУШЕНИЯ (FAIL): 3
+  1. [agent_phrases] нарушение в 1 текст(ах)
+     где: sections[0].blocks[0].text
+     цитата: «Давайте рассмотрим результаты!»
+  2. [exclamations] нарушение в 1 текст(ах)
+     где: sections[0].blocks[0].text
+     цитата: «…трим результаты!»
+  3. [placeholders] нарушение в 1 текст(ах)
+     где: sections[0].blocks[1].text
+     цитата: «$unresolved»
+ПРЕДУПРЕЖДЕНИЯ (warn): 0
+ИТОГ: FAIL: 3 нарушений (категории: agent_phrases, exclamations, placeholders)

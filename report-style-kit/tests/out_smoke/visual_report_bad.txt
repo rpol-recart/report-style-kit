@@ -1,0 +1,10 @@
+========================================================================
+lint_visual: tests/out_smoke/smoke_bad.docx
+Профиль: tests/work_extract_check/style-profile.json | Абзацев: 16 | Таблиц: 1 | Разделов (sectPr): 1
+========================================================================
+НАРУШЕНИЯ (FAIL): 3
+  1. [стили] para#5: недопустимый стиль 'Title' (допустимо: Normal, Heading 1, Heading 2, Heading 3, List Bullet)
+  2. [таблицы] table#0: стиль таблицы 'Table Grid' не зарегистрирован в profile.table_styles (допустимо: Light Grid Accent 1)
+  3. [таблицы] table#0: 1 ячеек с кеглем 14.0 вместо 10.0
+ПРЕДУПРЕЖДЕНИЯ (warn): 0
+ИТОГ: VISUAL FAIL: 3 нарушений

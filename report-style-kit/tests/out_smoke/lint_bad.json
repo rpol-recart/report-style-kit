@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "Тестовый отчёт",
+    "subtitle": "фикстура негативного линта",
+    "project": "Тест",
+    "version": "1",
+    "period": "2026-Q3"
+  },
+  "sections": [
+    {
+      "heading": "1. Раздел",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "thesis",
+          "text": "Давайте рассмотрим результаты!"
+        },
+        {
+          "type": "verdict",
+          "text": "$unresolved"
+        }
+      ]
+    }
+  ]
+}

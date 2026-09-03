@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "content-manifest.schema.json",
+  "title": "Content manifest — контракт блоковой грамматики отчёта",
+  "description": "Манифест содержимого: мета-блок и разделы, каждый из которых состоит из типизированных блоков. Любой text может содержать \"$unresolved\" — такой манифест обязан провалить линт (FAIL).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["meta", "sections"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "subtitle", "project", "version", "period"],
+      "properties": {
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "project": { "type": "string" },
+        "version": { "type": "string" },
+        "period": { "type": "string" }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["heading", "level", "blocks"],
+        "properties": {
+          "heading": { "type": "string" },
+          "level": { "enum": [1, 2, 3] },
+          "blocks": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "title": "thesis",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["type", "text"],
+                  "properties": {
+                    "type": { "const": "thesis" },
+                    "text": { "type": "string" }
+                  }
+                },
+                {
+                  "title": "lead_in",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["type", "label", "text"],
+                  "properties": {
+                    "type": { "const": "lead_in" },
+                    "label": { "type": "string" },
+                    "text": { "type": "string" }
+                  }
+                },
+                {
+                  "title": "formula",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["type", "text"],
+                  "properties": {
+                    "type": { "const": "formula" },
+                    "text": { "type": "string" }
+                  }
+                },
+                {
+                  "title": "bullets",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["type", "items"],
+                  "properties": {
+                    "type": { "const": "bullets" },
+                    "items": {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": { "type": "string" }
+                    }
+                  }
+                },
+                {
+                  "title": "table",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["type", "header", "rows"],
+                  "properties": {
+                    "type": { "const": "table" },
+                    "header": {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": { "type": "string" }
+                    },
+                    "rows": {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": {
+                        "type": "array",
+                        "items": { "type": "string" }
+                      }
+                    },
+                    "template": { "type": "string" }
+                  }
+                },
+                {
+                  "title": "figure",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["type", "caption", "image"],
+                  "properties": {
+                    "type": { "const": "figure" },
+                    "caption": { "type": "string" },
+                    "image": { "type": "string" },
+                    "explanation": { "type": "string" }
+                  }
+                },
+                {
+                  "title": "verdict",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["type", "text"],
+                  "properties": {
+                    "type": { "const": "verdict" },
+                    "text": { "type": "string" }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

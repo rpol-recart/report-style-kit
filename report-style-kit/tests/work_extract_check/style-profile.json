@@ -1,0 +1,828 @@
+{
+  "page": {
+    "width_emu": 7772400,
+    "height_emu": 10058400,
+    "orientation": "portrait",
+    "margins_emu": {
+      "top": 720090,
+      "right": 720090,
+      "bottom": 720090,
+      "left": 720090
+    }
+  },
+  "style_roles": {
+    "normal": {
+      "font": "Calibri",
+      "size_pt": 11.0,
+      "bold": null,
+      "color_hex": null,
+      "spacing_before_emu": null,
+      "spacing_after_emu": null,
+      "source": "style"
+    },
+    "heading1": {
+      "font": "Calibri",
+      "size_pt": 14.0,
+      "bold": true,
+      "color_hex": "365F91",
+      "spacing_before_emu": 304800,
+      "spacing_after_emu": 0,
+      "source": "theme"
+    },
+    "heading2": {
+      "font": "Calibri",
+      "size_pt": 13.0,
+      "bold": true,
+      "color_hex": "4F81BD",
+      "spacing_before_emu": 127000,
+      "spacing_after_emu": 0,
+      "source": "theme"
+    },
+    "heading3": {
+      "font": "Calibri",
+      "size_pt": null,
+      "bold": true,
+      "color_hex": "4F81BD",
+      "spacing_before_emu": 127000,
+      "spacing_after_emu": 0,
+      "source": "theme"
+    },
+    "list_bullet": {
+      "font": "Calibri",
+      "size_pt": null,
+      "bold": null,
+      "color_hex": null,
+      "spacing_before_emu": null,
+      "spacing_after_emu": null,
+      "source": "inherited"
+    }
+  },
+  "table_styles": [
+    {
+      "name": "Light Grid Accent 1",
+      "cell_size_pt": 10.0,
+      "header_bold": true
+    }
+  ],
+  "title_block": [
+    {
+      "size_pt": 20.0,
+      "bold": true,
+      "italic": null,
+      "alignment": "center"
+    },
+    {
+      "size_pt": 14.0,
+      "bold": null,
+      "italic": true,
+      "alignment": "center"
+    },
+    {
+      "size_pt": 11.0,
+      "bold": null,
+      "italic": null,
+      "alignment": "center"
+    }
+  ],
+  "block_patterns": {
+    "figure_caption_regex": "^Рис\\. \\d+\\.",
+    "formula_style": "italic",
+    "lead_in_terminator": ":",
+    "lead_in_count": 15,
+    "figure_caption_count": 3,
+    "formula_count": 14
+  },
+  "microtypography": {
+    "decimal_separator": "point",
+    "minus_char": "mixed",
+    "percent_spacing": "mixed",
+    "range_dash": "mixed",
+    "quotes": "guillemets",
+    "arrow": true,
+    "approx": true,
+    "multiplication": true,
+    "patterns": {
+      "decimal_point": 447,
+      "decimal_comma": 0,
+      "minus_unicode": 11,
+      "minus_ascii_hyphen": 111,
+      "percent_spaced": 11,
+      "percent_glued": 95,
+      "range_endash": 9,
+      "quotes_guillemets": 7,
+      "quotes_straight": 0,
+      "arrow": 22,
+      "approx": 13,
+      "multiplication": 11
+    },
+    "examples": {
+      "decimal_point": " DSpec v0.3.2 (PATCH, backward-compatibl"
+    }
+  },
+  "table_templates": [
+    {
+      "name": "table_template_1",
+      "header": [
+        "Сигнал",
+        "Каденция",
+        "Назначение в KF",
+        "Таблица"
+      ],
+      "exemplar_table_index": 0,
+      "occurrences": 1
+    },
+    {
+      "name": "key_value_params",
+      "header": [
+        "Период загрузки",
+        "2025-09-01 — 2026-02-01"
+      ],
+      "exemplar_table_index": 1,
+      "occurrences": 1
+    },
+    {
+      "name": "table_template_2",
+      "header": [
+        "Признак",
+        "μ",
+        "σ"
+      ],
+      "exemplar_table_index": 2,
+      "occurrences": 1
+    },
+    {
+      "name": "table_template_3",
+      "header": [
+        "Коэффициент",
+        "Значение",
+        "Интерпретация"
+      ],
+      "exemplar_table_index": 3,
+      "occurrences": 1
+    },
+    {
+      "name": "key_value_params_2",
+      "header": [
+        "Framework",
+        "PyMC 5.28.1"
+      ],
+      "exemplar_table_index": 4,
+      "occurrences": 1
+    },
+    {
+      "name": "table_template_4",
+      "header": [
+        "Источник",
+        "z_event",
+        "R_event",
+        "Примечание"
+      ],
+      "exemplar_table_index": 5,
+      "occurrences": 1
+    },
+    {
+      "name": "table_template_5",
+      "header": [
+        "σ_process (CR/√h)",
+        "0.02"
+      ],
+      "exemplar_table_index": 6,
+      "occurrences": 1
+    },
+    {
+      "name": "table_template_6",
+      "header": [
+        "Сетка",
+        "σ_process",
+        "σ_model",
+        "σ_tliq",
+        "β_temp_drift",
+        "Комбинаций"
+      ],
+      "exemplar_table_index": 7,
+      "occurrences": 1
+    },
+    {
+      "name": "table_template_7",
+      "header": [
+        "Шаг",
+        "Скрипт",
+        "Назначение",
+        "Артефакт",
+        "Статус"
+      ],
+      "exemplar_table_index": 8,
+      "occurrences": 1
+    },
+    {
+      "name": "metrics_comparison",
+      "header": [
+        "Метод",
+        "Avg MAE",
+        "Δ vs V8a",
+        "Pots улучшились"
+      ],
+      "exemplar_table_index": 9,
+      "occurrences": 1
+    },
+    {
+      "name": "per_pot_params",
+      "header": [
+        "POT",
+        "V8a baseline",
+        "V9 narrow",
+        "V9 wide",
+        "Δ wide vs V8a"
+      ],
+      "exemplar_table_index": 10,
+      "occurrences": 1
+    },
+    {
+      "name": "table_template_8",
+      "header": [
+        "Кластер",
+        "POT'ы",
+        "Что характерно"
+      ],
+      "exemplar_table_index": 11,
+      "occurrences": 1
+    },
+    {
+      "name": "metrics_comparison_2",
+      "header": [
+        "Метод",
+        "Avg MAE",
+        "Δ vs A",
+        "Δ vs B",
+        "Комментарий"
+      ],
+      "exemplar_table_index": 12,
+      "occurrences": 1
+    },
+    {
+      "name": "table_template_9",
+      "header": [
+        "Fold",
+        "Период",
+        "Global A",
+        "V9 fixed B",
+        "Re-opt C",
+        "B improved",
+        "C improved"
+      ],
+      "exemplar_table_index": 13,
+      "occurrences": 1
+    },
+    {
+      "name": "hypotheses_verdicts",
+      "header": [
+        "Гипотеза",
+        "Условие",
+        "Факт по fold'ам",
+        "Вердикт"
+      ],
+      "exemplar_table_index": 14,
+      "occurrences": 1
+    },
+    {
+      "name": "per_pot_params_2",
+      "header": [
+        "POT",
+        "A: Global V8a",
+        "B: V9 fixed",
+        "C: Re-opt",
+        "Δ B vs A",
+        "Δ C vs A"
+      ],
+      "exemplar_table_index": 15,
+      "occurrences": 2
+    },
+    {
+      "name": "per_pot_params_3",
+      "header": [
+        "POT",
+        "σ_process",
+        "σ_model",
+        "σ_tliq",
+        "σ_lab",
+        "β_temp_drift"
+      ],
+      "exemplar_table_index": 17,
+      "occurrences": 1
+    },
+    {
+      "name": "version_history",
+      "header": [
+        "Версия",
+        "MAE",
+        "Описание"
+      ],
+      "exemplar_table_index": 18,
+      "occurrences": 1
+    },
+    {
+      "name": "risks_register",
+      "header": [
+        "ID",
+        "Риск",
+        "P",
+        "I",
+        "Митигация"
+      ],
+      "exemplar_table_index": 19,
+      "occurrences": 1
+    },
+    {
+      "name": "table_template_10",
+      "header": [
+        "ID",
+        "Категория",
+        "Описание",
+        "План обнаружения"
+      ],
+      "exemplar_table_index": 20,
+      "occurrences": 1
+    }
+  ],
+  "section_blueprint": [
+    {
+      "level": 1,
+      "heading": "Аннотация",
+      "block_sequence": [
+        "thesis"
+      ]
+    },
+    {
+      "level": 1,
+      "heading": "Контекст и постановка задачи",
+      "block_sequence": [
+        "thesis",
+        "lead_in",
+        "thesis",
+        "lead_in",
+        "bullets"
+      ]
+    },
+    {
+      "level": 1,
+      "heading": "Используемые данные",
+      "block_sequence": [
+        "thesis"
+      ]
+    },
+    {
+      "level": 2,
+      "heading": "Источники сигналов",
+      "block_sequence": [
+        "table"
+      ]
+    },
+    {
+      "level": 2,
+      "heading": "Временные интервалы и разбиение",
+      "block_sequence": [
+        "table"
+      ]
+    },
+    {
+      "level": 2,
+      "heading": "Подготовка признаков",
+      "block_sequence": [
+        "bullets"
+      ]
+    },
+    {
+      "level": 2,
+      "heading": "Параметры стандартизации (production-снимок V9)",
+      "block_sequence": [
+        "table"
+      ]
+    },
+    {
+      "level": 1,
+      "heading": "Методология расчёта CR",
+      "block_sequence": [
+        "thesis"
+      ]
+    },
+    {
+      "level": 2,
+      "heading": "Модель наблюдений (байесовская регрессия)",
+      "block_sequence": [
+        "formula",
+        "table",
+        "lead_in",
+        "table"
+      ]
+    },
+    {
+      "level": 2,
+      "heading": "Линейная калибровка по T_liquidus",
+      "block_sequence": [
+        "formula",
+        "thesis"
+      ]
+    },
+    {
+      "level": 2,
+      "heading": "Калман-фильтр (5 параметров)",
+      "block_sequence": [
+        "thesis",
+        "lead_in",
+        "formula",
+        "formula",
+        "lead_in",
+        "formula",
+        "formula",
+        "formula",
+        "lead_in",
+        "table",
+        "lead_in",
+        "table"
+      ]
+    },
+    {
+      "level": 2,
+      "heading": "Per-pot оптимизация (V9)",
+      "block_sequence": [
+        "thesis",
+        "table",
+        "thesis"
+      ]
+    },
+    {
+      "level": 1,
+      "heading": "Проведённые эксперименты",
+      "block_sequence": []
+    },
+    {
+      "level": 2,
+      "heading": "Каскад экспериментов (V8a → V9 → V9b → V9c)",
+      "block_sequence": [
+        "table",
+        "thesis"
+      ]
+    },
+    {
+      "level": 2,
+      "heading": "Эксперимент E2 — wide grid per-pot",
+      "block_sequence": [
+        "table",
+        "thesis",
+        "lead_in",
+        "table"
+      ]
+    },
+    {
+      "level": 3,
+      "heading": "Анализ оптимальных σ-параметров (wide grid)",
+      "block_sequence": [
+        "thesis",
+        "bullets"
+      ]
+    },
+    {
+      "level": 3,
+      "heading": "Кластеризация ванн по поведению",
+      "block_sequence": [
+        "table"
+      ]
+    },
+    {
+      "level": 2,
+      "heading": "Эксперимент E3 — walk-forward валидация (V9b)",
+      "block_sequence": [
+        "thesis",
+        "bullets",
+        "lead_in",
+        "table",
+        "lead_in",
+        "table",
+        "lead_in",
+        "table",
+        "formula"
+      ]
+    },
+    {
+      "level": 2,
+      "heading": "Per-pot MAE по фолдам и методам (восстановлено из E4)",
+      "block_sequence": [
+        "thesis",
+        "lead_in",
+        "table",
+        "thesis",
+        "lead_in",
+        "table",
+        "thesis",
+        "formula"
+      ]
+    },
+    {
+      "level": 2,
+      "heading": "Эксперимент E4 — визуализация прогноз vs факт",
+      "block_sequence": [
+        "thesis",
+        "bullets"
+      ]
+    },
+    {
+      "level": 2,
+      "heading": "Графики",
+      "block_sequence": [
+        "thesis",
+        "figure",
+        "formula",
+        "thesis",
+        "figure",
+        "formula",
+        "thesis",
+        "figure",
+        "formula"
+      ]
+    },
+    {
+      "level": 1,
+      "heading": "Финальные per-pot параметры KF (V9 wide)",
+      "block_sequence": [
+        "thesis",
+        "table"
+      ]
+    },
+    {
+      "level": 1,
+      "heading": "История версий модели",
+      "block_sequence": [
+        "table"
+      ]
+    },
+    {
+      "level": 1,
+      "heading": "Риски и known unknowns",
+      "block_sequence": [
+        "thesis",
+        "lead_in",
+        "table",
+        "lead_in",
+        "table"
+      ]
+    },
+    {
+      "level": 1,
+      "heading": "Выводы и рекомендации",
+      "block_sequence": [
+        "bullets"
+      ]
+    },
+    {
+      "level": 1,
+      "heading": "Приложение. Документирование проекта",
+      "block_sequence": [
+        "thesis",
+        "bullets",
+        "formula"
+      ]
+    }
+  ],
+  "glossary_terms": [
+    {
+      "term": "POT_N",
+      "count": 99
+    },
+    {
+      "term": "v9",
+      "count": 38
+    },
+    {
+      "term": "per-pot",
+      "count": 31
+    },
+    {
+      "term": "cr",
+      "count": 23
+    },
+    {
+      "term": "v8a",
+      "count": 21
+    },
+    {
+      "term": "kf",
+      "count": 21
+    },
+    {
+      "term": "mae",
+      "count": 21
+    },
+    {
+      "term": "vs",
+      "count": 21
+    },
+    {
+      "term": "fold",
+      "count": 20
+    },
+    {
+      "term": "fixed",
+      "count": 17
+    },
+    {
+      "term": "baseline",
+      "count": 13
+    },
+    {
+      "term": "pot",
+      "count": 11
+    },
+    {
+      "term": "wide",
+      "count": 11
+    },
+    {
+      "term": "pot_10",
+      "count": 10
+    },
+    {
+      "term": "lab",
+      "count": 9
+    },
+    {
+      "term": "global",
+      "count": 9
+    },
+    {
+      "term": "avg",
+      "count": 9
+    },
+    {
+      "term": "pot_18",
+      "count": 9
+    },
+    {
+      "term": "walk-forward",
+      "count": 8
+    },
+    {
+      "term": "factor",
+      "count": 8
+    },
+    {
+      "term": "pot_21",
+      "count": 8
+    },
+    {
+      "term": "alf3",
+      "count": 7
+    },
+    {
+      "term": "t_liq",
+      "count": 7
+    },
+    {
+      "term": "pot_19",
+      "count": 7
+    },
+    {
+      "term": "pot_20",
+      "count": 7
+    },
+    {
+      "term": "re-opt",
+      "count": 7
+    },
+    {
+      "term": "pot_25",
+      "count": 6
+    },
+    {
+      "term": "train",
+      "count": 6
+    },
+    {
+      "term": "test",
+      "count": 6
+    },
+    {
+      "term": "kf-",
+      "count": 6
+    },
+    {
+      "term": "narrow",
+      "count": 6
+    },
+    {
+      "term": "done",
+      "count": 6
+    },
+    {
+      "term": "e3",
+      "count": 6
+    },
+    {
+      "term": "pot_14",
+      "count": 6
+    },
+    {
+      "term": "pot_17",
+      "count": 6
+    },
+    {
+      "term": "pot_23",
+      "count": 6
+    },
+    {
+      "term": "grid",
+      "count": 5
+    },
+    {
+      "term": "drift",
+      "count": 5
+    },
+    {
+      "term": "t_liquidus",
+      "count": 5
+    },
+    {
+      "term": "_temp_drift",
+      "count": 5
+    },
+    {
+      "term": "_process",
+      "count": 5
+    },
+    {
+      "term": "_model",
+      "count": 5
+    },
+    {
+      "term": "_tliq",
+      "count": 5
+    },
+    {
+      "term": "production",
+      "count": 5
+    },
+    {
+      "term": "e4",
+      "count": 5
+    },
+    {
+      "term": "pot_11",
+      "count": 5
+    },
+    {
+      "term": "pot_12",
+      "count": 5
+    },
+    {
+      "term": "pot_13",
+      "count": 5
+    },
+    {
+      "term": "pot_15",
+      "count": 5
+    },
+    {
+      "term": "pot_16",
+      "count": 5
+    },
+    {
+      "term": "pot_24",
+      "count": 5
+    },
+    {
+      "term": "re-optimization",
+      "count": 5
+    },
+    {
+      "term": "low_frequency",
+      "count": 4
+    },
+    {
+      "term": "bath_temp",
+      "count": 4
+    },
+    {
+      "term": "lab_cr",
+      "count": 4
+    },
+    {
+      "term": "p_pred",
+      "count": 4
+    },
+    {
+      "term": "_lab",
+      "count": 4
+    },
+    {
+      "term": "e2",
+      "count": 4
+    },
+    {
+      "term": "pot_22",
+      "count": 4
+    },
+    {
+      "term": "known",
+      "count": 4
+    }
+  ]
+}
