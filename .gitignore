@@ -6,8 +6,8 @@ __pycache__/
 *.pyc
 
 # Регенерируемые артефакты тестов (пересоздаются при прогоне)
-tests/work_extract_check/
-tests/work_golden/
-tests/work_synthetic/
-tests/out_ref/
-tests/out_synthetic/
+report-style-kit/tests/work_extract_check/
+report-style-kit/tests/work_golden/
+report-style-kit/tests/work_synthetic/
+report-style-kit/tests/out_ref/
+report-style-kit/tests/out_synthetic/
